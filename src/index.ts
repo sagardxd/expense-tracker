@@ -1,10 +1,11 @@
 import express, { Request, Response } from 'express';
+import userRouter from './routes/user';
 
 // Initialize Express app
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-userrout
+app.use("/api/user", userRouter);
 
 // Define routes
 app.get('/', (req: Request, res: Response) => {
